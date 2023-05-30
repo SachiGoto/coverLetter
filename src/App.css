@@ -5,6 +5,67 @@
   text-align: center;
 }
 
+.top-bar {
+  position: fixed;
+  height: 58px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: white;
+  z-index: 5;
+}
+
+.mobileNav {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 58px;
+  left: 0;
+}
+
+.left-sidebar {
+  background-color: white;
+  position: fixed;
+  right: auto;
+  bottom: 0;
+  width: 50px;
+  padding-top: 0;
+  justify-content: flex-end;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+  left: 0;
+  color: #2b2a2b;
+  font-size: 25px;
+  line-height: 40px;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  min-height: 160px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  color: #afaaaa;
+  gap: 30px;
+}
+
+.home,
+.about-me {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.mobileNav {
+  position: fixed;
+  top: 58px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
