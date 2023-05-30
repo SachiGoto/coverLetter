@@ -1,5 +1,9 @@
 function Navbar() {
-  return <>This is nav bar</>;
+  return (
+    <>
+      <h1 className="bg-blue-500">This is Nav bar</h1>
+    </>
+  );
 }
 
 export default Navbar;
