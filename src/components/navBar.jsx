@@ -1,15 +1,16 @@
 // import { Fragment } from "react";
 import { Disclosure } from "@headlessui/react";
-// import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Link } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/sachi-logo.png";
 const navigation = [
-  { name: "About Me", href: "#", current: true },
-  { name: "Projects", href: "#", current: false },
-  { name: "Why Company", href: "#", current: false },
-  { name: "Why Me", href: "#", current: false },
-  { name: "Skills", href: "#", current: false },
-  { name: "Preference", href: "#", current: false },
+  { name: "About Me", href: "/aboutMe", current: true },
+  { name: "Projects", href: "/projects", current: false },
+  { name: "Why Company", href: "/whyCompany", current: false },
+  { name: "Why Me", href: "/whyMe", current: false },
+  { name: "Skills", href: "/skills", current: false },
+  { name: "Preference", href: "/references", current: false },
   { name: "Resume", href: "#", current: false },
 ];
 
@@ -18,6 +19,8 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  // const navigate = useNavigate();
+  // navigate("/")
   return (
     <Disclosure as="nav" className="navBar">
       {({ open }) => (
@@ -52,8 +55,9 @@ export default function Navbar() {
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a
-                        key={item.name}
+                        // to={item.href}
                         href={item.href}
+                        key={item.name}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
@@ -76,8 +80,8 @@ export default function Navbar() {
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
-                  as="a"
-                  href={item.href}
+                  as="Link"
+                  to={item.href}
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"
