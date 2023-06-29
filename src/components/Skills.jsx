@@ -76,7 +76,10 @@ export default function Skills() {
   ];
 
   return (
-    <section className="skills min-h-[80vh] flex flex-col justify-center">
+    <section
+      id="skills"
+      className="skills min-h-[80vh] flex flex-col justify-center mb-[10%]"
+    >
       <h2 className="text-3xl font-extrabold mb-[10%]">Skills</h2>
       <div className="flex flex-col">
         <h4>Design tools</h4>
@@ -97,39 +100,46 @@ export default function Skills() {
         </div>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-[5%]">
         <h4>Front End Tools</h4>
-        <div className="frontEnd py-[5%] flex justify-center">
+        <div className=" frontEnd p-[5%] grid grid-cols-3 md:grid-cols-5 gap-4r">
           {frontEnd.map((icon) => (
-            <>
-              <Tooltip content={icon.name}>
-                <img
-                  data-tooltip-target={icon.name}
-                  className="w-[50px] h-[50px] object-cover mx-[2%]"
-                  src={icon.url}
-                  key={icon.name}
-                  alt={icon.name}
-                />
-              </Tooltip>
-            </>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex flex-col">
-        <h4>Back End Tools</h4>
-        <div className=" py-[5%] backEnd  flex justify-center">
-          {backEnd.map((icon) => (
-            <>
+            <div
+              className="flex justify-center items-center my-5"
+              key={icon.name}
+            >
               <Tooltip content={icon.name}>
                 <img
                   data-tooltip-target={icon.name}
                   className="w-[50px] h-[50px] object-cover"
                   src={icon.url}
-                  key={icon.name}
                   alt={icon.name}
                 />
               </Tooltip>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-col mt-[5%]">
+        <h4>Back End Tools</h4>
+        <div className=" p-[5%] backEnd  flex justify-center">
+          {backEnd.map((icon) => (
+            <>
+              <div
+                className="flex justify-center items-center m-5"
+                key={icon.name}
+              >
+                <Tooltip content={icon.name}>
+                  <img
+                    data-tooltip-target={icon.name}
+                    className="w-[60px] h-[60px] object-contain mx-3"
+                    src={icon.url}
+                    key={icon.name}
+                    alt={icon.name}
+                  />
+                </Tooltip>
+              </div>
             </>
           ))}
         </div>
