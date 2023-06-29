@@ -5,88 +5,79 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import Zoom from "react-reveal/Zoom";
+
 import { RocketLaunchIcon } from "@heroicons/react/24/solid";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import { FaFistRaised } from "react-icons/fa";
+import { RiPlantLine } from "react-icons/ri";
+import {LiaHandsHelpingSolid} from "react-icons/lia";
 
-export default function WhyMe() {
+export default function WhyMe({ company }) {
   return (
-    <section className="whyMe min-h-[80vh] flex flex-col justify-center">
+    <section id="whyMe" className="whyMe min-h-[80vh] justify-center mb-[10%]">
       <h2 className="text-3xl font-extrabold mb-[10%]">
-        But why should the Company hire me?
+        But why should {company} hire me?
       </h2>
-      <div className="flex flex-col md:flex-row">
-        <Card className="mt-6 mx-[3%]">
-          <CardBody>
-            <RocketLaunchIcon className="text-blue-500 w-12 h-12 mb-4" />
-            <Typography variant="h5" color="blue-gray" className="mb-2">
-              UI/UX Review Check
-            </Typography>
-            <Typography>
-              Because it's about motivating the doers. Because I'm here to
-              follow my dreams and inspire others.
-            </Typography>
-          </CardBody>
-          <CardFooter className="pt-0">
-            <a href="#" className="inline-block">
-              <Button
-                size="sm"
-                variant="text"
-                className="flex items-center gap-2"
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
+        <Zoom top>
+          <Card className=" mt-6 mx-[3%] h-full">
+            <CardBody>
+              <FaFistRaised className="text-blue-500 w-12 h-12 mb-4 mx-auto" />
+              <Typography
+                variant="h5"
+                color="blue-gray"
+                className="mb-2 font-sans"
               >
-                Learn More
-                <ArrowLongRightIcon strokeWidth={2} className="w-4 h-4" />
-              </Button>
-            </a>
-          </CardFooter>
-        </Card>
-        <Card className="mt-6 mx-[3%]">
-          <CardBody>
-            <RocketLaunchIcon className="text-blue-500 w-12 h-12 mb-4" />
-            <Typography variant="h5" color="blue-gray" className="mb-2">
-              UI/UX Review Check
-            </Typography>
-            <Typography>
-              Because it's about motivating the doers. Because I'm here to
-              follow my dreams and inspire others.
-            </Typography>
-          </CardBody>
-          <CardFooter className="pt-0">
-            <a href="#" className="inline-block">
-              <Button
-                size="sm"
-                variant="text"
-                className="flex items-center gap-2"
+                Grit / Resilient
+              </Typography>
+              <Typography className="font-serif">
+                I'm all about that grit and resilience. When faced with
+                challenges, I've got this unwavering determination to keep
+                pushing forward and bounce back stronger.
+              </Typography>
+            </CardBody>
+          </Card>
+        </Zoom>
+        <Zoom top>
+          <Card className=" mt-6 mx-[3%] h-full">
+            <CardBody>
+              <RiPlantLine className="text-blue-500 w-12 h-12 mb-4 mx-auto" />
+              <Typography
+                variant="h5"
+                color="blue-gray"
+                className="mb-2 font-sans"
               >
-                Learn More
-                <ArrowLongRightIcon strokeWidth={2} className="w-4 h-4" />
-              </Button>
-            </a>
-          </CardFooter>
-        </Card>
-        <Card className="mt-6 mx-[3%]">
-          <CardBody>
-            <RocketLaunchIcon className="text-blue-500 w-12 h-12 mb-4" />
-            <Typography variant="h5" color="blue-gray" className="mb-2">
-              UI/UX Review Check
-            </Typography>
-            <Typography>
-              Because it's about motivating the doers. Because I'm here to
-              follow my dreams and inspire others.
-            </Typography>
-          </CardBody>
-          <CardFooter className="pt-0">
-            <a href="#" className="inline-block">
-              <Button
-                size="sm"
-                variant="text"
-                className="flex items-center gap-2"
+                Drive to grow
+              </Typography>
+              <Typography className="font-serif">
+                A genuine passion for staying up to date with emerging
+                technologies. I thrive on the opportunity to work on new
+                projects that involve cutting-edge tech stacks.
+                
+              </Typography>
+            </CardBody>
+          </Card>
+        </Zoom>
+        <Zoom top>
+          <Card className=" mt-6 mx-[3%] h-full">
+            <CardBody>
+              <LiaHandsHelpingSolid className="text-blue-500 w-12 h-12 mb-4 mx-auto" />
+              <Typography
+                variant="h5"
+                color="blue-gray"
+                className="mb-2 font-sans"
               >
-                Learn More
-                <ArrowLongRightIcon strokeWidth={2} className="w-4 h-4" />
-              </Button>
-            </a>
-          </CardFooter>
-        </Card>
+                Collaborative
+              </Typography>
+              <Typography className="font-serif">
+                I believe that being a team player is a key to success.I value
+                respecting and listening others and grow together and achieve
+                {company}'s mission.
+              </Typography>
+            </CardBody>
+          </Card>
+        </Zoom>
       </div>
     </section>
   );

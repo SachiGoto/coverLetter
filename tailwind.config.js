@@ -7,7 +7,11 @@ export default withMT({
       primary: "#003049",
       secondary: "#d62828",
       tertiary: "#77f00",
-      backgroundColor: "#eae2b7",
+      backgroundColor: "#f2f4f5",
+    },
+    fontFamily:{
+      'serif':['Helvetica', 'Arial', 'sans-serif'],
+      'sans':['"Domine"', 'serif'],
     },
     extend: {},
   },

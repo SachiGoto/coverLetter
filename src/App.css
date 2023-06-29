@@ -3,6 +3,128 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+body {
+  background-color: #f4f4f3;
+background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+  /* background-image: url(../src/assets/bg-dots.png); */
+  /* background-image: url(../src/assets/natural-paper-1920x1080.png); */
+  object-fit: cover;
+  height: auto;
+  /* background-repeat: no-repeat; */
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  font-family: "Domine", serif;
+}
+
+
+
+.circle {
+  left: 50px;
+  top: 58px;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+}
+
+.arrow{
+  opacity:0;
+  animation-name:upDown;
+  animation-duration:3s;
+  animation-delay:3s;
+  animation-iteration-count: infinite;
+  /* animation : upDown 2s ease-in-out infinite; */
+
+}
+
+
+
+.introduction{
+
+  /* animation popup 3s ease-in-out */
+
+  animation: popup 2s ease-in-out;
+
+}
+
+.introduction2{
+
+  /* animation popup 3s ease-in-out */
+
+ opacity:0;
+  animation-name:popup;
+  animation-duration:3s;
+  animation-delay:2.5s;
+  animation-fill-mode:forwards;
+
+}
+
+.companyName{
+
+opacity:0;
+  animation-name:popup;
+  animation-duration:3s;
+  animation-delay:1s;
+  animation-fill-mode:forwards;
+  
+
+}
+
+.wavingHand{
+
+opacity:0;
+  animation-name:popup;
+  animation-duration:3s;
+  animation-delay:2s;
+  animation-fill-mode:forwards;
+    /* animation-delay:7s; */
+}
+
+@keyframes popup{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
+@keyframes upDown{
+  0%{
+    opacity:0;
+    transform: translateY(0px);
+  }
+  50%{
+    opacity:1;
+    transform: translateY(10px);
+  }
+  100%{
+    opacity:0;
+    transform: translateY(0px);
+  }
+}
+  
+
+
+.projectBg{
+ background-color: #f8f9e6;
+background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+}
+
+.slideshow div .bottom-4 {
+  display:flex;
+  justify-content:center;
+align-items:center;
+  background-color:rgb(21, 120, 242);
+  width:80px;
+  height:30px;
+  border-radius:10px;
+  
 }
 
 .top-bar {
@@ -33,7 +155,6 @@
   padding-top: 0;
   justify-content: flex-end;
   top: 0;
-  z-index: 100;
   background-color: #fff;
   left: 0;
   color: #2b2a2b;
@@ -41,7 +162,7 @@
   line-height: 40px;
   display: flex;
   flex-direction: column;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .sidebar-links {
@@ -64,6 +185,16 @@
 .mobileNav {
   position: fixed;
   top: 58px;
+}
+
+.sachiAsPerson {
+  background-image: url(../src/assets/gplay-1920x1080.png);
+}
+
+.timeLine {
+
+  background-image: url(../src/assets/natural-paper-1920x1080.png);
+  
 }
 
 .logo {
